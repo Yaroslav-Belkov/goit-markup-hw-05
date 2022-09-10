@@ -71,7 +71,7 @@
       <section class="hero">
         <div class="conteiner">
           <h1 class="heero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button" type="button">Замовити послугу</button>
+          <button class="button"  data-modal-open type="button">Замовити послугу</button>
         </div>
       </section>
 
@@ -138,27 +138,42 @@
         <div class="conteiner">
           <h2 class="title busines">Чим ми займаємося</h2>
           <ul class="photo">
+            <div class="proff-cont">
             <li class="img">
               <img
                 src="./images/box_1.jpg"
                 alt="Фото програмування"
                 width="370"
               />
+              <div class="discr-cont">
+              <p class="proff-discr">Дисктопні додатки</p>
+              </div>
             </li>
+            </div>
+            <div class="proff-cont">
             <li class="img">
               <img
                 src="./images/box_2.jpg"
                 alt="Фото адаптування"
                 width="370"
               />
+              <div class="discr-cont">
+              <p class="proff-discr">Мобільні додатки</p>
+              </div>
             </li>
+            </div>
+            <div class="proff-cont">
             <li class="img">
               <img
                 src="./images/box_3.jpg"
                 alt="Фото програмування"
                 width="370"
               />
+              <div class="discr-cont">
+              <p class="proff-discr">Дизайнерські рішення</p>
+              </div>
             </li>
+            </div>
           </ul>
         </div>
       </section>
@@ -180,8 +195,7 @@
               <div class="div-team">
                 <h3 class="team-name">Ігор Дем'яненко</h3>
                 <p class="team-post">Product Designer</p>
-              </div>
-              <ul class="social-link">
+                 <ul class="social-link">
                 <li class="social-link-cont">
                   <a
                     href="https://www.instagram.com/"
@@ -227,6 +241,8 @@
                   </a>
                 </li>
               </ul>
+              </div>
+             
             </li>
 
             <li class="team-item">
@@ -239,8 +255,7 @@
               <div class="div-team">
                 <h3 class="team-name">Ольга Рєпіна</h3>
                 <p class="team-post">Frontend Developer</p>
-              </div>
-               <ul class="social-link">
+                <ul class="social-link">
                 <li class="social-link-cont">
                   <a
                     href="https://www.instagram.com/"
@@ -286,6 +301,8 @@
                   </a>
                 </li>
               </ul>
+              </div>
+               
             </li>
             </li>
 
@@ -299,8 +316,7 @@
               <div class="div-team">
                 <h3 class="team-name">Микола Тарасов</h3>
                 <p class="team-post">Marketing</p>
-              </div>
-               <ul class="social-link">
+                <ul class="social-link">
                 <li class="social-link-cont">
                   <a
                     href="https://www.instagram.com/"
@@ -346,6 +362,8 @@
                   </a>
                 </li>
               </ul>
+              </div>
+               
             </li>
             </li>
 
@@ -359,8 +377,7 @@
               <div class="div-team">
                 <h3 class="team-name">Михайло Єрмаков</h3>
                 <p class="team-post">UI Designer</p>
-              </div>
-               <ul class="social-link">
+                  <ul class="social-link">
                 <li class="social-link-cont">
                   <a
                     href="https://www.instagram.com/"
@@ -406,6 +423,8 @@
                   </a>
                 </li>
               </ul>
+              </div>
+             
             </li>
             </li>
           </ul>
@@ -420,7 +439,7 @@
           <ul class="regular-cust-flex">
             <li class="regular-cust">
              <a href="" class="regular-link" >
-              <svg class="" width="41px" height="47px">
+              <svg class="svg-icons" width="41px" height="47px">
                 <use href="./images/sprite.svg#icon-Union">
 
                 </use>
@@ -429,7 +448,7 @@
             </li>
             <li class="regular-cust">
              <a href="" class="regular-link" >
-              <svg class="" width="40px" height="52px">
+              <svg class="svg-icons" width="40px" height="52px">
                 <use href="./images/sprite.svg#icon-group_0">
 
                 </use>
@@ -438,7 +457,7 @@
             </li>
              <li class="regular-cust">
              <a href="" class="regular-link" >
-              <svg class="" width="40px" height="52px">
+              <svg class="svg-icons" width="40px" height="52px">
                 <use href="./images/sprite.svg#icon-group_1">
 
                 </use>
@@ -447,7 +466,7 @@
             </li>
              <li class="regular-cust">
              <a href="" class="regular-link" >
-              <svg class="" width="85px" height="41px">
+              <svg class="svg-icons" width="85px" height="41px">
                 <use href="./images/sprite.svg#icon-group_2">
 
                 </use>
@@ -456,7 +475,7 @@
             </li>
               <li class="regular-cust">
              <a href="" class="regular-link">
-              <svg class="" width="63px" height="46px">
+              <svg class="svg-icons" width="63px" height="46px">
                 <use href="./images/sprite.svg#icon-group_3">
 
                 </use>
@@ -465,7 +484,7 @@
             </li>
                 <li class="regular-cust">
              <a href="" class="regular-link">
-              <svg class="" width="94px" height="44px">
+              <svg class="svg-icons" width="94px" height="44px">
                 <use href="./images/sprite.svg#icon-group_4">
 
                 </use>
@@ -558,10 +577,22 @@
                   </a>
                 </li>
               </ul>
+              <!-- Модальное окно -->
+            <div class="backdrop is-hidden" data-modal>
+              <div class="modal">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta, nemo voluptatibus, sed ab expedita corrupti consequatur commodi quo cupiditate sint ratione perspiciatis qui facere ipsum optio ipsa repellendus animi.</p>
+              <button class="modal-button"  data-modal-close type="button"
+              >
+              <img src="./images/close1.svg" alt="Закрити">
+            
+            </button>
+              </div>
+            </div>
 
     </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
 <!--Readi quest-->
