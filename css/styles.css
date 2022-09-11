@@ -22,7 +22,7 @@
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+/* Базовые стили */
 body {
   font-family: 'Roboto';
   font-size: 14px;
@@ -49,6 +49,15 @@ img {
 a {
   text-decoration: none;
 }
+
+.conteiner {
+  margin: 0 auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Оформление */
 
 .section {
   padding-top: 94px;
@@ -98,6 +107,7 @@ font-family: 'Raleway';
 
 }
 
+/* Подведение линии под навигацией */
 .nav .studio.current::after,
 .nav .portfolio.current::after
  {
@@ -111,6 +121,7 @@ font-family: 'Raleway';
   background-color: var(--button-hover-color);
 }
 
+/* Оформление шапки */
 .head-flex {
   display: flex;
   align-items: center;
@@ -160,12 +171,7 @@ font-family: 'Raleway';
 
 
 
-.conteiner {
-  margin: 0 auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+
 
 /* Контакти сайту */
 .contacts a {
@@ -288,6 +294,9 @@ color: var(--hover-color);
   margin: -1px;
 }
 
+
+/* Блок Наши особенности  */
+
 .svg-conteiner {
   width: 270px;
   height: 120px;
@@ -349,8 +358,11 @@ color: var(--hover-color);
   margin-left: 30px;
 }
 
+/*  Блок Чем мы занимаемся  */
 
-
+.conteiner .busines {
+  margin-bottom: 50px;
+}
 .proffesional {
   padding-top: 0;
 }
@@ -375,6 +387,7 @@ color: var(--hover-color);
 
 }
 
+/* Блок Наша команда  */
 
 .team-list {
   display: flex;
@@ -425,12 +438,11 @@ font-weight: 500;
   
 }
 
+/* Блок иконок соц сетей в блоке Наша команда */
 .social-link {
   display: flex;
   justify-content: center;
-
 }
-
 
 .href-social-link {
   display: flex;
@@ -464,6 +476,7 @@ color: var(--light-collor);
 }
 
 
+/* Блок наши клиенты  */
 
 .regular-link {
   display: flex;
@@ -508,10 +521,9 @@ margin-bottom: 50px;
 padding-bottom: 50px;
 }
 
-.conteiner .busines {
-  margin-bottom: 50px;
-}
 
+
+/* Футер сайта  */
 
 .footer.portfolio {
   margin-top: 94px;
@@ -609,7 +621,7 @@ transition-property: color;
   background-color: var(--hover-color);
 }
 /* Portfolio */
-
+/* Оформление кнопок в фильтре портфолио */
 .button-filters {
   display: block;
   font-weight: 500;
@@ -647,9 +659,6 @@ transition-property: color;
   border-top: 1px solid var(--border-color-top);
 
 }
-
-
-
 
 .portfolio-discr {
   display: flex;
@@ -695,8 +704,6 @@ transition-property: color;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-
-
 .overley {
   position: absolute;
   top: 0;
@@ -712,10 +719,7 @@ transition-property: color;
 
 }
 
-
 /* Разметка и отступы между карточками */
-
-
 
 .portfolio-item {
   display: block;
