@@ -648,12 +648,7 @@ transition-property: color;
 
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
 
-  border: 1px solid #EEEEEE;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 
 .portfolio-discr {
@@ -671,15 +666,28 @@ transition-property: color;
   color: var(--light-collor);
 
 }
-/* Делаем ефект оверлей на карточке */
+/* Делаем ефект оверлей на карточки */
 .box {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-item:hover .overley {
+.portfolio-item:hover .overley,
+.portfolio-item:focus .overley {
   transform: translateY(0);
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
 
 .overley {
   position: absolute;
@@ -690,7 +698,9 @@ transition-property: color;
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform 250ms;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 
 }
 
