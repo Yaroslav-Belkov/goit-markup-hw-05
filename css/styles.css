@@ -84,15 +84,15 @@ font-family: 'Raleway';
 /* Навігація сайту */
 .nav-link {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   text-decoration: none;
   list-style: none;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--nav-color);
-    transition-property: var(--nav-color);
+    transition-property: color;
       transition-duration: 250ms;
       transition-timing-function: var(--cubic-bezier);
 
@@ -103,11 +103,10 @@ font-family: 'Raleway';
  {
   content: "";
   position: absolute;
-  bottom: -22px;
+  bottom: 0;
   left: 0;
-  display: block;
   width: 100%;
-  height: 5px;
+  height: 4px;
   border-radius: 2px;
   background-color: var(--button-hover-color);
 }
@@ -129,6 +128,7 @@ font-family: 'Raleway';
 
 .nav-flex {
   display: flex;
+  align-items: center;
 }
 .nav {
   display: flex;
@@ -175,7 +175,7 @@ font-family: 'Raleway';
     line-height: 1.14;
     text-decoration: none;
     color: var(--contacts-color);
-    transition-property: var(--contacts-color);
+    transition-property: color;
       transition-duration: 250ms;
       transition-timing-function: var(--cubic-bezier);
 
@@ -259,7 +259,7 @@ color: var(--hover-color);
     border: none;
     background: var(--button-color);
       color: var(--light-collor);
-      transition-property: var(--button-color);
+      transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: var(--cubic-bezier);
 }
@@ -360,18 +360,16 @@ color: var(--hover-color);
 }
 
 .proff-discr {
-  display: block;
+  display: flex;
+  justify-content: center;
+ align-items: center;
   position: absolute;
   bottom: 0;
-  left: 0;
   background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
   width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
   font-weight: 700;
     line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--light-collor);
 
@@ -434,9 +432,6 @@ font-weight: 500;
 }
 
 
-
-
-
 .href-social-link {
   display: flex;
   width: 44px;
@@ -445,11 +440,9 @@ font-weight: 500;
   justify-content: center;
   align-items: center;
   color: var(--icons-color);
-  transition-property: color;
+  transition-property: color, background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic-bezier);
-
-    transform: ;
 }
 
 .soc-icons {
@@ -481,7 +474,7 @@ color: var(--light-collor);
   border: 1px solid var(--icons-color);
   color: var(--icons-color);
   border-radius: 4px;
-  transition-property: color var(--icons-color);
+  transition-property: color, border;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
@@ -534,7 +527,7 @@ padding-bottom: 50px;
     font-weight: 400;
     line-height: 1.71;
     color: var(--cont-foot-color);
-    transition-property: var(--cont-foot-color);
+    transition-property: color;
       transition-duration: 250ms;
       transition-timing-function: var(--cubic-bezier);
 
@@ -548,7 +541,7 @@ padding-bottom: 50px;
 text-decoration: none;
 line-height: 1.71;
 color: var(--light-collor);
-transition-property: var(--light-collor);
+transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
@@ -589,7 +582,7 @@ transition-property: var(--light-collor);
   color: var(--brand-color-fut);
   background: rgba(255, 255, 255, 0.1);
 
-  transition-property: color var(--brand-color-fut);
+  transition-property: color, background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic-bezier);
 
@@ -602,6 +595,18 @@ transition-property: var(--light-collor);
 
 .center-footer {
   margin-left: 70px;
+}
+
+
+
+.social-link-cont-foot:not(:last-child) {
+  margin-right: 10px;
+}
+
+.href-social-link-foot:hover,
+.href-social-link-foot:focus {
+  color: var(--light-collor);
+  background-color: var(--hover-color);
 }
 /* Portfolio */
 
@@ -616,7 +621,7 @@ transition-property: var(--light-collor);
     border-radius: 4px; 
     border: none;
     padding: 6px 22px;
-    transition-property: var(--button-filters-color), var(--nav-color);
+    transition-property: color, backgroun-color, box-shadow;
       transition-duration: 250ms;
       transition-timing-function: var(--cubic-bezier);
     
@@ -633,6 +638,8 @@ transition-property: var(--light-collor);
   border-top: 1px solid var(--border-color-top);
 
 }
+
+/* Карточки портфолио */
 
 .portfolio-list {
   display: flex;
@@ -693,7 +700,7 @@ width: 322px;
 
 .tools-portfolio {
   position: relative;
-  overflow: hidden;
+ overflow: hidden;
 }
 
 
@@ -712,8 +719,8 @@ width: 322px;
   margin-bottom: 0px;
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-item:hover .tools-portfolio,
+.portfolio-item:focus .tools-portfolio {
   border: 1px solid #EEEEEE;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
