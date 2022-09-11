@@ -634,10 +634,7 @@ transition-property: color;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-border{
-  border-top: 1px solid var(--border-color-top);
 
-}
 
 /* Карточки портфолио */
 
@@ -646,33 +643,17 @@ transition-property: color;
   flex-wrap: wrap;
 
 }
+.portfolio-border {
+  border-top: 1px solid var(--border-color-top);
 
-.overley {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-
-  opacity: 0;
-  
-
-  transform: translateY(100%);
-  transition: transform 250ms var(--cubic-bezier);
 }
 
-.portfolio-item:hover .overley,
-.portfolio-item:focus .overley {
-opacity: 1;
-transform: translateY(0);
-}
+.portfolio-item:hover,
+.portfolio-item:focus {
 
-/* .portfolio-item:hover .portfolio-link,
- .portfolio-item:focus .portfolio-link {
   border: 1px solid #EEEEEE;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-} */
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 
 .portfolio-discr {
@@ -683,25 +664,39 @@ transform: translateY(0);
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50% );
-width: 322px;
+ width: 322px;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--light-collor);
- opacity: 0;
 
 }
-
-.portfolio-item:hover .portfolio-discr,
- .portfolio-item:focus .portfolio-discr {
-  opacity: 1;
-}
-
-
-.tools-portfolio {
+/* Делаем ефект оверлей на карточке */
+.box {
   position: relative;
- overflow: hidden;
+  overflow: hidden;
 }
+
+.portfolio-item:hover .overley {
+  transform: translateY(0);
+}
+
+.overley {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms;
+
+}
+
+
+/* Разметка и отступы между карточками */
+
 
 
 .portfolio-item {
@@ -719,11 +714,7 @@ width: 322px;
   margin-bottom: 0px;
 }
 
-.portfolio-item:hover .tools-portfolio,
-.portfolio-item:focus .tools-portfolio {
-  border: 1px solid #EEEEEE;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 .portfolio-title {
   font-weight: 700;
     font-size: 18px;
